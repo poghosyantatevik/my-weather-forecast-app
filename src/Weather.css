@@ -1,21 +1,10 @@
-body {
-    background-color: rgb(1, 87, 155)!important;
-}
-
-.main-heading {
-    color: rgb(255, 187, 84);
-    font-size: 4rem;
-    font-weight: bold;
-    vertical-align: bottom;
-}
-
 .main-sub {
     color: rgb(252, 222, 159);
     margin-top: 1rem;
+    text-align: center;
 }
 
 .card {
-    display: flex;
     margin: 0 auto;
     width: 20rem;
     height: 17rem;
@@ -36,41 +25,14 @@ body {
     align-items: flex-start;
 }
 
-.line {
-    color: rgb(140, 199, 247);
-}
-
-.button-style {
-    background-color: rgb(255, 187, 84);
-    border: rgb(252, 180, 72);
-    color: rgb(1, 87, 155);
-    width: 5rem;
-    border-radius: 5px;
-    height: 2rem;
-    font-size: 14px;
-}
-
-.button-style:hover {
-    color: rgb(243, 240, 236);
-    font-weight: bold;
-}
-
-.input-style {
-    background-color: rgb(183, 207, 243);
-    border: rgb(61, 133, 241);
-    width: 12rem;
-    border-radius: 3px;
-    margin-right: 5px;
-    font-size: 14px;
-    height: 2rem;
-    font-weight: bold;
-    color: rgb(27, 4, 128);
-}
-
 .warning-message {
     color: rgb(243, 240, 236);
     font-weight: bold;
     margin-top: 1.5rem;
+}
+
+.forecast-div {
+    display: flex;
 }
 
 .forecast-cards {
@@ -81,6 +43,11 @@ body {
     background-color: rgba(236, 242, 248, 0.89) !important;
     border-radius: 5px;
     margin: 10px;
+}
+
+.forecast-div {
+    text-align: center;
+    display: block;
 }
 
 .forecast-heading {

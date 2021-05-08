@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Weather } from "./Weather";
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
 import "./App.css";
 
 export default function App() {
@@ -17,11 +16,14 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div>
+      <div className="d-flex flex-row mx-auto">
+      <div  className="justify-content-md-center align-self-center mx-auto">
       <h1 className="main-heading">
         Weather Forecast App <FontAwesomeIcon icon="cloud-sun" color="white" />
       </h1>
       <hr className="line" />
+      <div className="text-center">
       <input
         type="text"
         value={inputName}
@@ -31,6 +33,9 @@ export default function App() {
       <button onClick={onSearchClick} className="button-style">
         Search
       </button>
+      </div>
+      </div>
+      </div>
       <Weather name={name} />
     </div>
   );
