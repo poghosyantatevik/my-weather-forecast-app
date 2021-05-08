@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Weather } from "./Weather";
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-function App() {
+import "./App.css";
+
+export default function App() {
+  const [name, setName] = useState("");
+  const [inputName, setInputName] = useState("");
+
+  const onNameChange = (e) => {
+    setInputName(e.target.value);
+  };
+
+  const onSearchClick = () => {
+    setName(inputName);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="main-heading">
+        Weather Forecast App <FontAwesomeIcon icon="cloud-sun" color="white" />
+      </h1>
+      <hr className="line" />
+      <input
+        type="text"
+        value={inputName}
+        onChange={onNameChange}
+        className="input-style"
+      />
+      <button onClick={onSearchClick} className="button-style">
+        Search
+      </button>
+      <Weather name={name} />
     </div>
   );
 }
-
-export default App;
