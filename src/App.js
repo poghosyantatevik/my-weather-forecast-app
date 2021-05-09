@@ -18,7 +18,7 @@ export default function App() {
   return (
     <div>
       <div className="d-flex flex-row mx-auto">
-      <div  className="justify-content-md-center align-self-center mx-auto">
+      <div  className="justify-content-sm-center align-self-center mx-auto">
       <h1 className="main-heading">
         Weather Forecast App <FontAwesomeIcon icon="cloud-sun" color="white" />
       </h1>
@@ -38,5 +38,7 @@ export default function App() {
       </div>
       <Weather name={name} />
     </div>
+ 
+
   );
 }
